@@ -1,0 +1,395 @@
+:root {
+  --tamna-pozadina: #212429;
+  --svijetla-pozadina: #f9f9fb;
+  --shadow: 3px 3px 2px #f5f5f7;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  font-family: sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: var(--svijetla-pozadina);
+}
+
+h1 {
+  font-size: 3rem;
+  line-height: 1.5;
+  font-weight: 700;
+}
+
+img {
+  width: 100%;
+}
+
+/* Header i navigacija */
+header {
+  background-color: var(--tamna-pozadina);
+  padding: 0 3%;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+header i[class*="fa"] {
+  font-size: 2rem;
+  cursor: pointer;
+  padding: 2rem;
+  transition: color 0.5s linear;
+}
+
+header i[class*="fa"]:hover {
+  color: #999;
+}
+
+nav i {
+  border-left: 1px solid #3b3b3c;
+  border-right: 1px solid #3b3b3c;
+}
+
+.ikone i:first-child {
+  border-left: 1px solid #3b3b3c;
+}
+
+.ikone i {
+  border-right: 1px solid #3b3b3c;
+}
+
+header > a {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+.main-nav {
+  position: absolute;
+  top: -300px;
+  list-style: none;
+  background-color: var(--tamna-pozadina);
+  width: 94%;
+}
+
+.main-nav li {
+  margin: 1.5rem;
+}
+
+.main-nav a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 2rem;
+  border-bottom: 1px solid transparent;
+  transition: border-bottom 0.5s ease;
+}
+
+.main-nav a:hover {
+  border-bottom: 1px solid #f5f5f7;
+}
+
+.active {
+  top: 60px;
+}
+
+.menu-toggle {
+  width: 6rem;
+}
+
+/* Hero sekcija */
+
+.hero {
+  background: linear-gradient(var(--tamna-pozadina) 50%, var(--svijetla-pozadina) 50%);
+}
+
+.hero__content {
+  width: 94%;
+  margin: 0 auto;
+  height: 70vh;
+  background: url(./slike/naslovna.jpg) no-repeat center center/cover;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 7%;
+  letter-spacing: 5px;
+  text-shadow: 1px 1px 4px #000;
+}
+
+.hero__content p {
+  order: -1;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.hero__content button {
+  background-color: #fff;
+  width: 18rem;
+  font-size: 1.8rem;
+  margin-top: 6rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  padding: 2rem;
+  cursor: pointer;
+  transition: background-color 1s linear, color 1.5s ease;
+}
+
+.hero__content button:hover {
+  background-color: var(--tamna-pozadina);
+  color: #fff;
+}
+
+/* Search sekcija */
+.search {
+  width: 94%;
+  margin: 0 auto;
+  background-color: #f7f7f7;
+  display: flex;
+  padding: 2.7rem 0;
+  font-size: 1.6rem;
+  line-height: 6rem;
+}
+
+.search p {
+  flex-basis: 17%;
+  letter-spacing: 3px;
+  font-weight: bold;
+}
+
+.search form {
+  flex-basis: 83%;
+  display: flex;
+}
+
+.search form::before {
+  content: "\f002";
+  font: var(--fa-font-solid);
+  color: #fff;
+  background-color: var(--tamna-pozadina);
+  line-height: 6rem;
+  width: 6rem;
+  text-align: center;
+}
+
+.input__polje {
+  flex-basis: 80%;
+  padding-left: 2rem;
+}
+
+.input__polje::placeholder {
+  color: #bbb;
+  letter-spacing: 3px;
+}
+
+.input__button {
+  flex-basis: 20%;
+  margin-left: 3.5rem;
+  background-color: var(--tamna-pozadina);
+  color: #fff;
+  font-weight: 700;
+  letter-spacing: 3px;
+  cursor: pointer;
+  transition: background-color 1s linear, color 1.5s ease;
+}
+
+.input__button:hover {
+  background-color: #eee;
+  color: var(--tamna-pozadina);
+}
+
+/* Main - kartična sekcija */
+
+.index-main {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(36rem, 1fr));
+  gap: 3.5rem;
+  margin: 0 3%;
+  padding-bottom: 15rem;
+}
+
+.kartica {
+  display: grid;
+  grid-template-rows: 1fr auto;
+  background-color: #fff;
+  border: 1px solid #f8f8f9;
+}
+
+.kartica__info {
+  text-align: center;
+}
+
+.kartica__info p {
+  color: #999;
+  font-size: 1.6rem;
+}
+
+.kartica__info p:first-of-type {
+  margin-top: 6.5rem;
+}
+
+.kartica__info h2 {
+  font-size: 2.5rem;
+  margin: 2.4rem 0;
+}
+
+.kartica__info button {
+  padding: 2rem;
+  border-left: 2px solid #e3e3e3;
+  border-right: 2px solid #e3e3e3;
+  background: transparent;
+  font-size: 2.2rem;
+  margin: 4.5rem 0;
+  cursor: pointer;
+  transition: background 1s ease;
+}
+
+.kartica__info button:hover {
+  background: #e3e3e3;
+}
+
+.kartica__social {
+  display: flex;
+  justify-content: space-around;
+  border-top: 2px solid #f8f8f9;
+  padding: 3rem 0;
+  font-size: 2rem;
+}
+
+.kartica__icons {
+  display: flex;
+  gap: 1rem;
+}
+
+.kartica__no__image {
+  color: #464646;
+  margin-top: 4.5rem;
+  letter-spacing: 2px;
+  line-height: 2;
+  padding: 0 2rem;
+}
+
+.tamna-kartica {
+  background-color: var(--tamna-pozadina);
+}
+
+.tamna-kartica .kartica__no__image {
+  color: #fff;
+  margin-bottom: 4.5rem;
+}
+
+/* About stranica - main sekcija */
+
+.about-main {
+  width: 94%;
+  margin: 11rem auto;
+  display: flex;
+  gap: 3rem;
+  font-size: 1.6rem;
+}
+
+.about-article {
+  flex-basis: 75%;
+  background-color: #fff;
+  text-align: center;
+  padding-bottom: 6.5rem;
+}
+
+.about-article img {
+  margin-bottom: 8rem;
+}
+
+.about-title {
+  display: flex;
+  flex-direction: column-reverse;
+  color: #212121;
+}
+
+.about-title h1 {
+  margin: 3.5rem;
+}
+
+.grey {
+  color: #a7a7a7;
+}
+
+.about-name-date {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  margin-bottom: 4.5rem;
+}
+
+.grey i {
+  color: #464646;
+}
+
+.about-article > p {
+  text-align: justify;
+  letter-spacing: 2px;
+  line-height: 1.5;
+  color: #464646;
+  margin-bottom: 4.5rem;
+  padding: 0 7rem;
+}
+
+.about-aside {
+  flex-basis: 25%;
+}
+/* Footer sekcija */
+
+footer {
+  background-color: var(--tamna-pozadina);
+}
+
+.footer-container {
+  width: 94%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(36rem, 1fr));
+  gap: 3.5rem;
+  padding-top: 7rem;
+  color: #fff;
+}
+
+.footer-container h2 {
+  margin-bottom: 4.5rem;
+}
+
+.footer-container p {
+  font-size: 1.6rem;
+  line-height: 2;
+}
+
+.footer-images {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 3px;
+}
+
+.footer-container hr {
+  margin: 3rem 0;
+  border: 1px solid #616366;
+}
+
+.copyright {
+  background-color: #17191c;
+  text-align: center;
+  color: #616366;
+  font-size: 1.6rem;
+  line-height: 2;
+  padding: 2rem;
+}
+
+.copyright a {
+  color: #616366;
+  text-decoration: none;
+}
